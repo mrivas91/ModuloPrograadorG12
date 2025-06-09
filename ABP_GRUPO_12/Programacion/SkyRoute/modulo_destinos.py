@@ -101,24 +101,24 @@ def modificar_destino():
     lugar = cursor.fetchone()
 
     if lugar:
-            print("Datos actuales del destino:", lugar)
-            pais=input("Ingrese el nombre del PAIS de destino: ")
-            estado=input("Ingrese el nombre del ESTADO de destino: ")
-            ciudad=input("Ingrese el nombre de la CIUDAD de destino: ")
-            costo_destino=float(input("Ingrese el COSTO de destino: $"))
+        print("Datos actuales del destino:", lugar)
+        pais=input("Ingrese el nombre del PAIS de destino: ")
+        estado=input("Ingrese el nombre del ESTADO de destino: ")
+        ciudad=input("Ingrese el nombre de la CIUDAD de destino: ")
+        costo_destino=float(input("Ingrese el COSTO de destino: $"))
 
             #Acá hay código SQL-- sentencia update para modificar destino
-            cursor.execute("""
-            UPDATE destinos
-            SET  pais= %s,estado= %s,ciudad= %s,costo_base_destino= %s
-            WHERE id_destino = %s 
-            """, ( id, pais,estado,ciudad,costo_destino))
+        cursor.execute("""
+        UPDATE destinos
+        SET  pais= %s,estado= %s,ciudad= %s,costo_base_destino= %s
+        WHERE id_destino = %s 
+        """, (  pais,estado,ciudad,costo_destino, id))
 
-            conexion.commit()
-            print("************************************************************************")
-            print("El destino fue modificado exitosamente.")
-            print("************************************************************************")
-            print(f"""
+        conexion.commit()
+        print("************************************************************************")
+        print("El destino fue modificado exitosamente.")
+        print("************************************************************************")
+        print(f"""
 
 ************************************************************************
         Detalles del Destino:
@@ -133,4 +133,4 @@ def modificar_destino():
         print("************************************************************************")
         print("No se encontró ningun destino con esa ciudad.")
         print("************************************************************************")
-    conexion.close()
+        conexion.close()

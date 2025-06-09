@@ -22,7 +22,7 @@ def registrar_clientes ():
     print("1. Persona física")
     print("2. Persona jurídica")
     
-    tipo_de_cliente= int(input("Si es una empresa ingrese 1 si es particular ingrese 2: "))
+    tipo_de_cliente= int(input("si es particular ingrese 1 , si es una empresa ingrese 2: "))
 
 #si el usuario no ingresa un valor valido se definira que el cliente es una persona física
 
