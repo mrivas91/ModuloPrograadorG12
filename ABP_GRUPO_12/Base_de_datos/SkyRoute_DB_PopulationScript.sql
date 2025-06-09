@@ -18,6 +18,9 @@ VALUES(1, 34677549, '27-34677549-7', 'Mariela', 'Rivas', '-', 'myantequera@gmail
 INSERT INTO skyroute_db.cliente
 (id_cliente, DNI, CUIT_CUIL, nombre, apellido, razon_social, email, telefono, id_tipo_persona)
 VALUES(3, 33276228, '20-33276228-2', 'Juan Ignacio', 'Alonso', '-', 'zalbak87@gmail.com', '2604000293', 1);
+INSERT INTO skyroute_db.cliente
+(id_cliente, DNI, CUIT_CUIL, nombre, apellido, razon_social, email, telefono, id_tipo_persona)
+VALUES(6, 30722626, '27-30722626-5', 'Maria Pia', 'Fava Perez ', '-', 'piafava@gmail.com', '3517529737', 2);
 
 -- Insertar datos de prueba en la tabla Destino
 INSERT INTO skyroute_db.destinos
